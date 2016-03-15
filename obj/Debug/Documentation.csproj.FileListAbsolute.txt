@@ -1,0 +1,10 @@
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\bin\Debug\Documentation.exe
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\bin\Debug\Documentation.pdb
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\bin\Debug\Newtonsoft.Json.dll
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\bin\Debug\System.Net.Http.Formatting.dll
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\bin\Debug\Newtonsoft.Json.xml
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\bin\Debug\System.Net.Http.Formatting.xml
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\obj\Debug\Documentation.exe
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\obj\Debug\Documentation.pdb
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\bin\Debug\Documentation.exe.config
+D:\Dev\ebay_dev\CategoryConverter\Documentation\Documentation\obj\Debug\Documentation.csprojResolveAssemblyReference.cache
