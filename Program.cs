@@ -28,7 +28,7 @@ namespace Documentation
         static void GetEbayCategoryByProductName()
         {
             //The server base api endPoint
-            string endPoint = "http://localhost:32224//api/Main/";
+            string endPoint = "http://api.ecommerceapi.org/v1/";
             //Function Name
             string functionName = "GetEbayCategoryByProductName";
             string apiAddress = string.Format("{0}{1}", endPoint, functionName);
@@ -82,7 +82,7 @@ namespace Documentation
         static void GetAmazonCategoryByProductName()
         {
             //The server base api endPoint
-            string endPoint = "http://localhost:32224//api/Main/";
+            string endPoint = "http://api.ecommerceapi.org/v1/";
             //Function Name
             string functionName = "GetAmazonCategoryByProductName";
             string apiAddress = string.Format("{0}{1}", endPoint, functionName);
@@ -136,7 +136,7 @@ namespace Documentation
         static void GetAmazonCategoryByEbayCategory()
         {
             //The server base api endPoint
-            string endPoint = "http://localhost:32224//api/Main/";
+            string endPoint = "http://api.ecommerceapi.org/v1/";
             //Function Name
             string functionName = "GetAmazonCategoryByEbayCategory";
             string apiAddress = string.Format("{0}{1}", endPoint, functionName);
@@ -191,7 +191,7 @@ namespace Documentation
         static void GetEbayCategoryByAmazonCategory()
         {
             //The server base api endPoint
-            string endPoint = "http://localhost:32224//api/Main/";
+            string endPoint = "http://api.ecommerceapi.org/v1/";
             //Function Name
             string functionName = "GetEbayCategoryByAmazonCategory";
             string apiAddress = string.Format("{0}{1}", endPoint, functionName);
@@ -246,7 +246,7 @@ namespace Documentation
         static void GetEbayEnvironment()
         {
             //The server base api endPoint
-            string endPoint = "http://localhost:32224//api/Main/";
+            string endPoint = "http://api.ecommerceapi.org/v1/";
             //Function Name
             string functionName = "GetEbayEnvironment";
             string apiAddress = string.Format("{0}{1}", endPoint, functionName);
@@ -321,7 +321,7 @@ namespace Documentation
         static void GetAmazonEnvironment()
         {
             //The server base api endPoint
-            string endPoint = "http://localhost:32224//api/Main/";
+            string endPoint = "http://api.ecommerceapi.org/v1/";
             //Function Name
             string functionName = "GetAmazonEnvironment";
             string apiAddress = string.Format("{0}{1}", endPoint, functionName);
