@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -19,6 +19,8 @@ namespace Documentation
             //GetAmazonCategoryByProductName();
             //GetAmazonCategoryByEbayCategory();
             //GetEbayCategoryByAmazonCategory();
+            //GetEbayCategoryRelations();
+            //GetAmazonCategoryRelations();
             //GetEbayEnvironment();
             //GetAmazonEnvironment();
 
@@ -214,6 +216,112 @@ namespace Documentation
                 //This field should contain the target ebay environment code for more information see "GetEbayEnvironment" function
                 RequestAmazonEnvironment = 1,//com
                 ResponseEbayEnvironment = 0//us
+            };
+
+
+            using (HttpClient _httpClient = new HttpClient())
+            {
+                _httpClient.BaseAddress = new System.Uri(apiAddress);
+
+                //Pass the token in the header
+                _httpClient.DefaultRequestHeaders.Add("Token", myToken);
+
+                //Pass the clientId in the header
+                _httpClient.DefaultRequestHeaders.Add("ClientId", myClientId);
+                var myTask = _httpClient.PostAsJsonAsync(apiAddress, bodyRequest);
+
+                res = myTask.Result;
+            }
+
+            string jsonResult = null;
+
+            //res.Content.ReadAsStringAsync(); //You can use this string and serialize by yourself
+            res.Content.ReadAsStringAsync().ContinueWith(task =>
+            {
+                jsonResult = task.Result;
+            }).Wait();
+
+            //This function print the result after deserialize it. you can see this method in out documentation.
+            DisplayResult(jsonResult);
+        }
+
+        static void GetEbayCategoryRelations()
+        {
+            //The server base api endPoint
+            string endPoint = "http://api.ecommerceapi.org/v1/";
+            //Function Name
+            string functionName = "GetEbayCategoryRelations";
+            string apiAddress = string.Format("{0}{1}", endPoint, functionName);
+
+
+            //Your Private token, get after registration in your dashboard, the token changes when you replace program
+            string myToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJQcm9ncmFtSWQiOjIsIkdyb3VwSWRlbnRpZmllciI6IjFkNzE5NjAyLTk5MmUtNGI5Yy1iNjNjLWU1Y2M3MjlmYTRjNiIsIlVzZXJJZCI6OH0.OCnNwEHkZxA_oI6QikzcSoF5nxdnoRQm_6MJ6uvB_e4";
+
+            //Your ClientId you get after registration, you can see it in your dashboard
+            string myClientId = "LPDiCbpal0aUD4nM5mz9Pw";
+            HttpResponseMessage res = null;
+
+
+
+
+            var bodyRequest = new
+            {
+                EbayCategoryId = 300,
+                
+                RequestEbayEnvironment = 0//us
+            };
+
+
+            using (HttpClient _httpClient = new HttpClient())
+            {
+                _httpClient.BaseAddress = new System.Uri(apiAddress);
+
+                //Pass the token in the header
+                _httpClient.DefaultRequestHeaders.Add("Token", myToken);
+
+                //Pass the clientId in the header
+                _httpClient.DefaultRequestHeaders.Add("ClientId", myClientId);
+                var myTask = _httpClient.PostAsJsonAsync(apiAddress, bodyRequest);
+
+                res = myTask.Result;
+            }
+
+            string jsonResult = null;
+
+            //res.Content.ReadAsStringAsync(); //You can use this string and serialize by yourself
+            res.Content.ReadAsStringAsync().ContinueWith(task =>
+            {
+                jsonResult = task.Result;
+            }).Wait();
+
+            //This function print the result after deserialize it. you can see this method in out documentation.
+            DisplayResult(jsonResult);
+        }
+
+        static void GetAmazonCategoryRelations()
+        {
+            //The server base api endPoint
+            string endPoint = "http://api.ecommerceapi.org/v1/";
+            //Function Name
+            string functionName = "GetAmazonCategoryRelations";
+            string apiAddress = string.Format("{0}{1}", endPoint, functionName);
+
+
+            //Your Private token, get after registration in your dashboard, the token changes when you replace program
+            string myToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJQcm9ncmFtSWQiOjIsIkdyb3VwSWRlbnRpZmllciI6IjFkNzE5NjAyLTk5MmUtNGI5Yy1iNjNjLWU1Y2M3MjlmYTRjNiIsIlVzZXJJZCI6OH0.OCnNwEHkZxA_oI6QikzcSoF5nxdnoRQm_6MJ6uvB_e4";
+
+            //Your ClientId you get after registration, you can see it in your dashboard
+            string myClientId = "LPDiCbpal0aUD4nM5mz9Pw";
+            HttpResponseMessage res = null;
+
+
+
+
+            var bodyRequest = new
+            {
+                BrowseNodeId = 1294868011,
+
+                requestAmazonEnvironment = 0//us
             };
 
 
